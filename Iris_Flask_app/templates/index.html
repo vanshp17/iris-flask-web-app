@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flask Iris Flower Predictor</h1>
+    <form method="POST">
+        <label for="sepal_length">Sepal Length (cm):</label>
+        <input type="text" name="sepal_length" required><br>
+
+        <label for="sepal_width">Sepal Width (cm):</label>
+        <input type="text" name="sepal_width" required><br>
+
+        <label for="petal_length">Petal Length (cm):</label>
+        <input type="text" name="petal_length" required><br>
+
+        <label for="petal_width">Petal Width (cm):</label>
+        <input type="text" name="petal_width" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
